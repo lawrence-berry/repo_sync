@@ -26,7 +26,3 @@ do
     git pull origin master
   fi
 done
-
-
-
-# git submodule add git@bitbucket.org:displayflex/bash_helpers.git
