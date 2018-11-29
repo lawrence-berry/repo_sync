@@ -8,16 +8,20 @@ export REPOS=(
   /Users/$USER/Projects/util/bash_helpers
 )
 
+function isOnMaster() {
+  ON_MASTER_BRANCH=`git status | grep 'On branch master' | wc -l`
+  echo $ON_MASTER_BRANCH
+}
+
+function isWorkingDirClean() {
+  NO_UNCOMMITTED_FILES=`git status | grep ' working tree clean' | wc -l`
+  echo $NO_UNCOMMITTED_FILES
+}
 
 for repo in ${REPOS[@]}
 do
   cd $repo
-  IS_ON_MASTER=`isOnMaster`
-  echo $?
-  IS_CLEAN=`isWorkingDirClean`
-  echo $?  
-  exit 0
-  if [[ isOnMaster && isWorkingDirClean ]]; then
+  if [[ $(isOnMaster) -eq "1" && $(isWorkingDirClean) -eq "1" ]]; then
     echo "Updating "$repo" from master ..."
     git pull origin master
   fi
