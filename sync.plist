@@ -4,16 +4,14 @@
 <dict>
     <key>Label</key>
     <!-- The label should be the same as the filename without the extension -->
-    <string>org.yourusername.email-mom</string>
+    <string>repo_sync</string>
     <!-- Specify how to run your program here -->
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/bin/python</string>
-        <string>/Users/yourusername/bin/email.py</string>
-        <string>mom@home.com</string>
+        <string>/bin/bash</string>
+        <string>/Users/route/Projects/util/repo_sync/repo_sync.sh</string>
     </array>
-    <!-- Run every hour -->
     <key>StartInterval</key>
-    <integer>3600</integer><!-- seconds -->
+    <integer>60</integer><!-- seconds -->
 </dict>
 </plist>
