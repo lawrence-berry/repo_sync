@@ -11,6 +11,6 @@ if [[ $(isInstalled) -eq "0" ]]; then
   crontab -l > mycron
   echo "#repo_sync: Scheduled repo updater" >> mycron
   echo "* * * * * `echo $PWD`/sync.sh" >> mycron
-  crontab mycron
+  sudo crontab -u route mycron
   rm mycron
 fi
