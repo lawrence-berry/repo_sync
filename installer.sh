@@ -7,7 +7,7 @@ function isInstalled() {
 
 if [[ $(isInstalled) -eq "0" ]]; then
   echo "installing Repo Sync ..."
-  mv repo_sync.plist ~/Library/LaunchAgents/repo_sync.plist
+  cp repo_sync.plist ~/Library/LaunchAgents/repo_sync.plist
   launchctl load ~/Library/LaunchAgents/repo_sync.plist
   launchctl start repo_sync
 fi
