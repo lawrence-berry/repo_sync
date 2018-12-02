@@ -23,6 +23,7 @@ do
   cd $repo
   if [[ $(isOnMaster) -eq "1" && $(isWorkingDirClean) -eq "1" ]]; then
     echo "Updating "$repo" from master ..."
+    git fetch
     git pull --no-ff origin master
   fi
 done

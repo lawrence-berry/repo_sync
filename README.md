@@ -6,14 +6,26 @@ Sync Github repositories automatically.
 
 ## Status
 
-Blocked: Cron can't access git creds.
+Working on OS X
 
-## Next steps
+## Usage
 
-Switch to LaunchD - see
+Add repo paths to `sync.sh` and run `install.sh`. `.plist` file is copied to
+`/Library/LaunchAgents/` and invokes `sync.sh` every minute.
+App is installed 'in-place'
+so this folder cannot be moved after installation.
 
-https://apple.stackexchange.com/questions/18832/ssh-under-cron-stops-working-in-os-x-10-7-lion
+## LaunchD
 
-and
+TO stop a process you need to call both stop and unload
 
-http://killtheyak.com/schedule-jobs-launchd/
+```
+launchctl stop repo_sync.plist
+launchctl unload repo_sync.plist
+```
+
+## Other commands
+
+```
+launchctl list | grep repo_sync
+```
