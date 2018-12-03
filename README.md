@@ -12,8 +12,6 @@ Working on OS X
 
 Add repo paths to `sync.sh` and run `install.sh`. `.plist` file is copied to
 `/Library/LaunchAgents/` and invokes `sync.sh` every minute.
-App is installed 'in-place'
-so this folder cannot be moved after installation.
 
 ## LaunchD
 
@@ -29,3 +27,4 @@ launchctl unload repo_sync.plist
 ```
 launchctl list | grep repo_sync
 ```
+
