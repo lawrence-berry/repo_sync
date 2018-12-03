@@ -3,9 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <!-- The label should be the same as the filename without the extension -->
     <string>repo_sync</string>
-    <!-- Specify how to run your program here -->
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
