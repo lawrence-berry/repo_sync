@@ -1,7 +1,7 @@
 #! /bin/bash
 
 set -e
-source `dirname $0`/bash_helpers/bin/helpers.sh
+source /Users/$USER/Projects/util/bash_helpers/bin/helpers.sh
 
 export REPOS=(
   /Users/$USER/Projects/util/vim_config
