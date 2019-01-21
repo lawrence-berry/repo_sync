@@ -24,7 +24,14 @@ launchctl unload repo_sync.plist
 
 ## Other commands
 
+List LaunchD job:
+
 ```
 launchctl list | grep repo_sync
 ```
 
+View logs:
+
+```
+tail -f /var/log/system.log | grep repo_sync
+```
