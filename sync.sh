@@ -9,6 +9,7 @@ export REPOS=(
   /Users/$USER/Projects/util/terminal_aliases
   /Users/$USER/Projects/util/geo_me-makefile
   /Users/$USER/Projects/geome/deployment
+  /Users/$USER/Scripts
 )
 
 function isOnMaster() {
@@ -27,6 +28,6 @@ do
   if [[ $(isOnMaster) -eq "1" && $(isWorkingDirClean) -eq "1" ]]; then
     echo "Updating "$repo" from master ..."
     /usr/bin/git fetch
-    /usr/bin/git pull --no-ff --no-edit origin master
+    /usr/bin/git pull --rebase
   fi
 done
