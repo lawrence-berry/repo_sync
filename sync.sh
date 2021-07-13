@@ -7,6 +7,8 @@ export REPOS=(
   /Users/$USER/Projects/util/vim_config
   /Users/$USER/Projects/util/bash_helpers
   /Users/$USER/Projects/util/terminal_aliases
+  /Users/$USER/Projects/util/geo_me-makefile
+  /Users/$USER/Projects/geome/deployment
 )
 
 function isOnMaster() {
